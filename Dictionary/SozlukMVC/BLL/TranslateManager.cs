@@ -25,6 +25,7 @@ namespace BLL
             var p3 = new SqlParameter("hangi_dile", info.ToLang);
 
             return _db.Database.SqlQuery<string>("exec Translate @kelime , @hangi_dilden , @hangi_dile",p1,p2,p3).ToList();
+            //sqlde prosedur yok kelimler yok şimdilik
         }
     }
 }
